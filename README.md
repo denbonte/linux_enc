@@ -95,7 +95,7 @@ Writing superblocks and filesystem accounting information: done
 The only thing left to be done is to mount the encrypted hard drive (already opened with luks). First, let's create a mount point where we like the best, e.g., under `/mnt`: `sudo mkdir /mnt/data1`. Once that is done, just mount the drive running `sudo mount /dev/mapper/sdb_enc /mnt/data1/`.
 
 
-Sources:
+### Sources
 
 [Linux hard disk encryption with cryptsetup](https://www.cyberciti.biz/security/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/)
 
