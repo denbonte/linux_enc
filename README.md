@@ -98,7 +98,11 @@ The only thing left to be done is to mount the encrypted hard drive (already ope
 Sources:
 
 [Linux hard disk encryption with cryptsetup](https://www.cyberciti.biz/security/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/)
+
 [Linux hard disk encryption using LUKS](https://www.tecmint.com/linux-hard-disk-encryption-using-luks/)
+
 [How secure is an encrypted LUKS filesystem?](https://askubuntu.com/questions/97196/how-secure-is-an-encrypted-luks-filesystem)
+
 [How to backup or restore LUKS header](https://blog.sleeplessbeastie.eu/2019/01/09/how-to-backup-or-restore-luks-header/)
+
 [How to check volume encryption on Linux](https://unix.stackexchange.com/questions/108537/verify-if-a-hard-drive-is-encrypted-on-linux)
