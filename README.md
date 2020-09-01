@@ -94,6 +94,17 @@ Writing superblocks and filesystem accounting information: done
 
 The only thing left to be done is to mount the encrypted hard drive (already opened with luks). First, let's create a mount point where we like the best, e.g., under `/mnt`: `sudo mkdir /mnt/data1`. Once that is done, just mount the drive running `sudo mount /dev/mapper/sdb_enc /mnt/data1/`.
 
+## Checking if a Drive Got Encrypted
+
+To check if everything went allright, one can run the command `sudo blkid | grep sd`. The correct output should look like:
+
+```
+sudo blkid | grep sd
+/dev/sdb: UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" TYPE="crypto_LUKS"
+/dev/mapper/encsdb: UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" TYPE="ext4"
+```
+
+As proven by the different UUID, `/dev/sdb` and `/dev/mapper/encsdb` are different volumes: the former is the volume "as seen from the outside" (e.g., before it is mounted - so non-accessible, as it is encrypted), while the latter is the result of the opening+mounting commands (which is a not-anymore-encrypted drive, with an ext4 file system, we can write to and read from).
 
 ### Sources
 
